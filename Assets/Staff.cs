@@ -10,8 +10,8 @@ public class Staff : MonoBehaviour
 
     private float nexTimeToFire = 0f;
 
-    public ParticleSystem muzzleFlash;
-    public GameObject impactEffect;
+    //public ParticleSystem muzzleFlash;
+    //public GameObject impactEffect;
 
     // Update is called once per frame
     void Update()
@@ -25,7 +25,7 @@ public class Staff : MonoBehaviour
     void Shoot()
     {
         //PLay na animacao de Atirar.
-        muzzleFlash.Play();
+        //muzzleFlash.Play();
 
         RaycastHit hit;
         if(Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out hit, range))
@@ -39,9 +39,9 @@ public class Staff : MonoBehaviour
                 target.TakeDamage(damage);
             }
 
-            GameObject impact = Instantiate(impactEffect, hit.point, Quaternion.LookRotation(hit.normal));
+            //GameObject impact = Instantiate(impactEffect, hit.point, Quaternion.LookRotation(hit.normal));
 
-            Destroy(impact, 2f);
+            //Destroy(impact, 2f);
         }
 
     }
